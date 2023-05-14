@@ -16,7 +16,7 @@ const DUMMY_MEALS = [
     price: 15,
   },
   {
-    id: "m1",
+    id: "m3",
     name: "pavbhaji",
     description: "Finest fish and veggies",
     price: 12.99,
@@ -30,6 +30,7 @@ const AvailableMeals = () => {
       name={meal.name}
       description={meal.description}
       price={meal.price}
+      id={meal.id}
       
     />
   ));
