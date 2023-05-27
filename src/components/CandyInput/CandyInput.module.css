@@ -1,0 +1,36 @@
+.container{
+
+    padding-top: 100px;
+    padding-left: 15px;
+    display: flex;
+    padding-right: 50px;
+    justify-content: space-between;
+    
+
+
+    
+
+}
+label{
+    
+    font-size: 25px;
+     color :white,
+
+     
+}
+
+.lms{
+    width: 30px;
+
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+}
+button:hover{
+   background-color: black;
+   color: white;
+   font-size: 20px;
+}

@@ -1,13 +1,14 @@
-import { Fragment, useState } from 'react';
-import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
-import Cart from './components/Cart/Cart';
-import CartProvider from './Store/CartProvider';
-import CartContext from './Store/cart-context';
+import React,{useState} from 'react';
+import Candydata from './Components/CandyCard/Candydata';
+import CandyInput from './Components/CandyInput/CandyInput';
+import CartProvider from './CandySotre/CartProvider';
+import CandysonScreen from './Components/CandyCard/Candysonscreen';
+import CandyList from './Components/CandyCard/CandyList';
+import Header from './Components/Layout/Header';
+import Cart from './Components/CandyCart/Cart';
 
 
 function App() {
-
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () =>{
@@ -17,15 +18,26 @@ function App() {
   const hideCartHandler = () =>{
     setCartIsShown(false);
   }
+ 
 
   return (
+    <>
     <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler}/>}
+    {cartIsShown && <Cart onClose={hideCartHandler}/>}
       <Header onShowCart={showCartHandler} />
-      <main>
-        <Meals />
-      </main>
-    </CartProvider>
+     
+   <CandyInput />
+   {/* <Candydata /> */}
+
+
+   <main>
+   <CandysonScreen />
+   </main>
+   
+   {/* <CandyList /> */}
+   </CartProvider>
+
+   </>
   );
 }
 

@@ -20,3 +20,12 @@
     color: #ad5502;
     font-size: 1.25rem;
   }
+
+  .btncont{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    
+    
+  }
